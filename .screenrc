@@ -1,0 +1,35 @@
+hardstatus alwayslastline                                                                                                                     
+hardstatus string '       %{= kw}%?%-Lw%?%{G}%n*%f%t %{w}%?%+Lw%?%= %{kG}[ %{C}(F10)Title (F11)Prev (F12)Next %{kg}][%{kG} %Y/%m/%d %{kG}]' 
+#hardstatus string '[%= %{= kw}%?%-Lw%?%{Y}%n*%f%t %{K}%?%+Lw%?%= %{kG}][ %{C}(F8)Screen (F9)Title (F10)Detach (F11)Prev (F12)Next %{kg}][%{kG} %l %Y/%m/%d %{kG}]'  
+
+#shelltitle "$|bash"
+
+###shutdown the noise  
+vbell off  
+startup_message off  
+term linux  
+#set a biger buffer  
+defscrollback 409600
+
+#use ` as the Global Key  
+#escape ``
+#escape ^bb
+
+
+###initial apps to run  
+#screen  
+#screen  
+#select 0  
+
+###进行快捷键的绑定  
+#bind w to show the window list
+bind w windowlist -b
+bind ^w windowlist -b 
+#bindkey -k k8 screen
+#bindkey -k k9 detach 
+bindkey -k k; title
+bindkey -k F1 prev
+bindkey -k F2 next
+bindkey -k k4 quit
+attrcolor u "-u B"  
+autodetach on
